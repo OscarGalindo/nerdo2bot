@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs"
+  },
+  "files": [
+    "typings/tsd.d.ts",
+    "src/app.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

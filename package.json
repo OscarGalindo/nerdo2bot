@@ -1,0 +1,49 @@
+{
+  "name": "2nerdobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsd reinstall --overwrite --save",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarGalindo/2nerdobot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OscarGalindo/2nerdobot/issues"
+  },
+  "homepage": "https://github.com/OscarGalindo/2nerdobot#readme",
+  "dependencies": {
+    "cls-bluebird": "^1.0.1",
+    "continuation-local-storage": "^3.1.7",
+    "irc": "^0.5.0",
+    "net": "^1.0.2",
+    "node-loader": "^0.5.0",
+    "request": "^2.71.0",
+    "request-promise": "^2.0.1",
+    "tls": "0.0.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.12.15"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "iconv-lite-loader": "^1.0.0",
+    "json-loader": "^0.5.4",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.2.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-typescript-preprocessor2": "^1.1.1",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.4.5",
+    "node-noop": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
