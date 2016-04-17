@@ -1,12 +1,12 @@
 import {Client} from "irc";
-import {IClientOpts} from "irc";
+import {ClientOptions} from "irc";
 import {IPlugin} from "./plugin";
 import {Message} from "./message";
 
 export class Bot extends Client {
     private plugins:IPlugin[] = [];
 
-    constructor(server:string, nickname:string, config?:IClientOpts) {
+    constructor(server:string, nickname:string, config?:ClientOptions) {
         super(server, nickname, config);
 
         this.addListener('message', (from, ch, msg) => {

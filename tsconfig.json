@@ -4,7 +4,7 @@
     "module": "commonjs"
   },
   "files": [
-    "typings/tsd.d.ts",
+    "typings/main.d.ts",
     "src/app.ts"
   ],
   "exclude": [

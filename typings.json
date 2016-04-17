@@ -1,0 +1,16 @@
+{
+  "name": "2nerdobot",
+  "version": false,
+  "ambientDependencies": {
+    "assertion-error": "github:DefinitelyTyped/DefinitelyTyped/assertion-error/assertion-error.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "bluebird": "github:DefinitelyTyped/DefinitelyTyped/bluebird/bluebird.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "chai": "github:DefinitelyTyped/DefinitelyTyped/chai/chai.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "form-data": "github:DefinitelyTyped/DefinitelyTyped/form-data/form-data.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "irc": "file:./typings/local.irc.d.ts",
+    "mocha": "github:DefinitelyTyped/DefinitelyTyped/mocha/mocha.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "node": "registry:dt/node#4.0.0+20160412142033",
+    "request": "github:DefinitelyTyped/DefinitelyTyped/request/request.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "request-promise": "github:DefinitelyTyped/DefinitelyTyped/request-promise/request-promise.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0",
+    "sinon": "github:DefinitelyTyped/DefinitelyTyped/sinon/sinon.d.ts#94d8775a947f626269b06ccadd6f5e61839389d0"
+  }
+}
