@@ -1,12 +1,4 @@
-export interface IMessage {
-    message:string;
-
-    isCommand():boolean;
-    getCommand():string;
-    getArguments():string[];
-}
-
-export class Message implements IMessage {
+export class Message {
     constructor(public message:string) {
     }
 

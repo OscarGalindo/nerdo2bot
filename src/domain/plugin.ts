@@ -1,5 +1,3 @@
-import {Message} from "./message";
-
 export interface MetaDataPlugin {
     version?:string;
     description?:string;
