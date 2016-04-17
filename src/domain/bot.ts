@@ -14,8 +14,8 @@ export class Bot extends Client {
         });
     }
 
-    addPlugin(plugin:IPlugin) {
-        this.plugins.push(plugin);
+    addPlugins(plugins:IPlugin[]) {
+        this.plugins.push(...plugins);
     }
 
     private async parseCommand(from:string, ch:string, msg:Message) {
