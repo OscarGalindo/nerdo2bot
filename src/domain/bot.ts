@@ -18,10 +18,6 @@ export class Bot extends Client {
         this.plugins.push(plugin);
     }
 
-    addPlugins(plugins:IPlugin[]) {
-        this.plugins.concat(plugins);
-    }
-
     private async parseCommand(from:string, ch:string, msg:Message) {
         if (msg.isCommand()) {
             let cmd = msg.getCommand();
