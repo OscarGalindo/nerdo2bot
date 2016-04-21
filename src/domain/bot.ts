@@ -25,6 +25,10 @@ export class Bot extends Client {
         return plugin.command === cmd;
       })[0];
 
+      if(!plugin) {
+        return;
+      }
+
       plugin.exec(msg.getArguments(), from)
         .then((msg) => {
           this.say(ch, msg);
