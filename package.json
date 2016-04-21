@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/OscarGalindo/2nerdobot#readme",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "cls-bluebird": "^1.0.1",
     "continuation-local-storage": "^3.1.7",
     "irc": "^0.5.0",

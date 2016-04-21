@@ -8,5 +8,5 @@ export interface IPlugin {
     command:string;
     metadata?:MetaDataPlugin;
 
-    exec(args:string[]);
+    exec(args:string[], from?:string);
 }

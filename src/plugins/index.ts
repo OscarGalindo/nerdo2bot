@@ -1,5 +1,6 @@
 import {RedditPlugin} from './reddit/RedditPlugin';
 import {GooglePlugin} from "./google/GooglePlugin";
+import {MVLastPost} from "./mediavida/LastPost";
 
 const tits = new RedditPlugin(
   'http://www.reddit.com/r/legalteens+nipples+gonewild+nsfw+nsfw_gif+tits+realgirls/.json?',
@@ -13,4 +14,4 @@ const gatitos = new RedditPlugin(
   'gatitos'
 );
 
-export const PLUGINS = [tits, new GooglePlugin(), gatitos];
+export const PLUGINS = [tits, new GooglePlugin(), gatitos, new MVLastPost()];

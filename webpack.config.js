@@ -9,7 +9,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.node']
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.node', '.json']
     },
     module: {
         exprContextRegExp: /$^/,
