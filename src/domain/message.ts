@@ -3,7 +3,7 @@ export class Message {
   }
 
   isCommand(): boolean {
-    return this.message.charAt(0) === '!' && ['', ' '].indexOf(this.message.charAt(1)) === -1;
+    return /^!\w+/.test(this.message);
   }
 
   getCommand(): string {

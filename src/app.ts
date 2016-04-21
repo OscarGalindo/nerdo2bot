@@ -7,7 +7,7 @@ let server = 'fr.quakenet.org';
 let nick = 'nerdo2bot';
 let config: ClientOptions = {
   debug: true,
-  channels: ['#mv.nerda']
+  channels: ['#mv.nerd']
 };
 
 var bot = new Bot(server, nick, config);
