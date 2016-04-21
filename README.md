@@ -9,6 +9,7 @@
 # Run
  * npm install
  * cp config.example.json config.json
+ * npm run build
  * node build/bundle.js
 
  Don't forget to configure your bot!
