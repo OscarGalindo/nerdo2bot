@@ -7,7 +7,7 @@ let server = '127.0.0.1';
 let nick = 'nerdo2bot';
 let config = <ClientOptions> {
     debug: true,
-    channels: ['#mv.nerda']
+    channels: ['#mv.nerd']
 };
 
 var bot = new Bot(server, nick, config);
