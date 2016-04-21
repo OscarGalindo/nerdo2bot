@@ -1,0 +1,7 @@
+{
+  "server": "freenode.org",
+  "nick": "botname",
+  "config": {
+    "channels": ["#foo"]
+  }
+}
