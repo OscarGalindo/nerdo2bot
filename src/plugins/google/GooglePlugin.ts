@@ -13,6 +13,7 @@ export class GooglePlugin implements IPlugin {
     }
 
     async exec(args:string[]) {
+        console.log('Google');
         let query = encodeURIComponent(args.join(' '));
         return await request({uri: this.url + query, json: true})
             .then((data) => {
