@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "postinstall": "typings install",
     "test": "karma start"
   },
