@@ -3,44 +3,40 @@ import request = require("request-promise");
 import * as cheerio from 'cheerio';
 
 export class MVLastPost implements IPlugin {
-    name:string;
-    command:string;
-    url:string;
-    private mediavida:string = 'http://www.mediavida.com';
+  name: string;
+  command: string;
+  url: string;
+  private mediavida: string = 'http://www.mediavida.com';
 
-    constructor() {
-        this.name = 'MediaVida - Last Post from User';
-        this.command = 'mvlast';
-        this.url = 'http://www.mediavida.com/id/';
+  constructor() {
+    this.name = 'MediaVida - Last Post from User';
+    this.command = 'mvlast';
+    this.url = 'http://www.mediavida.com/id/';
+  }
+
+  async exec(args: string[]) {
+    if (!args[0]) {
+      return 'Username is needed';
     }
 
-    async exec(args:string[], from:string) {
-        if (!args[0]) {
-            return 'Username is needed';
+    var rOptions = {
+      uri: this.url + args[0],
+      transform: function (body) {
+        return cheerio.load(body);
+      }
+    };
+
+    return await request(rOptions)
+      .then(($) => {
+        if ($('#main').text().indexOf('no encontrado') > -1) {
+          return 'Usuario no encontrado';
         }
 
-        var rOptions = {
-            uri: this.url + args[0],
-            transform: function (body) {
-                return cheerio.load(body);
-            }
-        };
-
-        return await request(rOptions)
-            .then(($) => {
-                if ($('#main').text().indexOf('no encontrado') > -1) {
-                    return 'Usuario no encontrado';
-                }
-
-                if ($('#main').text().indexOf('baneado') > -1) {
-                    return 'Han baneado al retrasado de ' + args[0];
-                }
-
-                let item = $('ul.info span a').first();
-                return item.text() + ' - ' + this.mediavida + item.attr('href');
-            })
-            .catch(() => {
-                return 'Error';
-            });
-    }
+        let item = $('ul.info span a').first();
+        return item.text() + ' - ' + this.mediavida + item.attr('href');
+      })
+      .catch(() => {
+        return 'Error';
+      });
+  }
 }
