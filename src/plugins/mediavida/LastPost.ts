@@ -14,7 +14,7 @@ export class MVLastPost implements IPlugin {
         this.url = 'http://www.mediavida.com/id/';
     }
 
-    async exec(args:string[]) {
+    async exec(args:string[], from:string) {
         if (!args[0]) {
             return 'Username is needed';
         }
@@ -30,6 +30,10 @@ export class MVLastPost implements IPlugin {
             .then(($) => {
                 if ($('#main').text().indexOf('no encontrado') > -1) {
                     return 'Usuario no encontrado';
+                }
+
+                if ($('#main').text().indexOf('baneado') > -1) {
+                    return 'Han baneado al retrasado de ' + args[0];
                 }
 
                 let item = $('ul.info span a').first();
