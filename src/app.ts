@@ -1,14 +1,15 @@
-import {ClientOptions} from "irc";
 import {Bot} from "./domain/bot";
 import {PLUGINS} from './plugins';
 
-let server = 'fr.quakenet.org';
-// let server = '127.0.0.1';
-let nick = 'nerdo2bot';
-let config: ClientOptions = {
-  debug: true,
-  channels: ['#mv.nerd']
-};
+const config = require('../config.json');
 
-var bot = new Bot(server, nick, config);
+if (!config) {
+  throw 'There is no config, please check config.sample.json for an example';
+}
+
+const server = config.server;
+const nick = config.nick;
+const ircConfig = config.config;
+
+var bot = new Bot(server, nick, ircConfig);
 bot.addPlugins(PLUGINS);
