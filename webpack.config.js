@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: './src/app.ts',
     target: 'node',
-    devtool: 'sourcemap',
+    devtool: "cheap-sourcemap",
     output: {
         path: './build',
         filename: 'bundle.js'
@@ -32,9 +32,5 @@ module.exports = {
             {test: /\.node$/, loader: 'node-loader'},
             {test: /\.json(\?.*)?$/, loader: "json-loader"}
         ]
-    },
-    plugins: [
-        new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop'),
-        new webpack.IgnorePlugin(/\/iconv/)
-    ]
+    }
 };
